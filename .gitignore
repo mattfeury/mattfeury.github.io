@@ -20,7 +20,10 @@ syntax: glob
 # sass
 .sass-cache
 
-# other scm
+#audio files
+audio
+
+#other scm
 .svn
 .CVS
 .hg*

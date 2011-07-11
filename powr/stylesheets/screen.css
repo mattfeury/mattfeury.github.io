@@ -1,0 +1,229 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 14, ../../../.gem/ruby/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+/* line 17, ../../../.gem/ruby/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+body {
+  line-height: 1;
+  color: black;
+  background: white;
+}
+
+/* line 19, ../../../.gem/ruby/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 21, ../../../.gem/ruby/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+
+/* line 23, ../../../.gem/ruby/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 25, ../../../.gem/ruby/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: "" "";
+}
+/* line 96, ../../../.gem/ruby/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+}
+
+/* line 27, ../../../.gem/ruby/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 10, ../sass-hidden/screen.sass */
+* {
+  margin: 0;
+  padding: 0;
+  z-index: 0;
+}
+
+/* line 15, ../sass-hidden/screen.sass */
+a {
+  text-decoration: none;
+  font-weight: bold;
+}
+/* line 19, ../sass-hidden/screen.sass */
+a:hover {
+  text-decoration: underline;
+}
+/* line 21, ../sass-hidden/screen.sass */
+a:visited {
+  color: black;
+}
+
+/* line 24, ../sass-hidden/screen.sass */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-family: "Raleway", arial;
+  font-size: 72px;
+  margin: 0;
+}
+
+/* line 30, ../sass-hidden/screen.sass */
+body {
+  background-color: #2c2c2c;
+  color: #c2c2c2;
+  font-family: "Raleway", arial;
+}
+/* line 36, ../sass-hidden/screen.sass */
+body.thirsty #controls button {
+  display: none;
+}
+/* line 39, ../sass-hidden/screen.sass */
+body.thirsty #controls button#start {
+  display: block;
+}
+
+/* line 43, ../sass-hidden/screen.sass */
+header h1 span {
+  color: white;
+}
+
+/* line 46, ../sass-hidden/screen.sass */
+#controller {
+  display: block;
+  position: absolute;
+  width: 23%;
+  top: 0;
+  left: 0;
+  padding: 1%;
+}
+/* line 55, ../sass-hidden/screen.sass */
+#controller #controls {
+  margin: 20px 0px 0px;
+}
+/* line 58, ../sass-hidden/screen.sass */
+#controller #controls button {
+  width: 100%;
+  height: 60px;
+  margin: 5px 0px;
+  font-size: 1.05em;
+}
+
+/* line 64, ../sass-hidden/screen.sass */
+#video {
+  display: block;
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 75%;
+}
+
+/* line 73, ../sass-hidden/screen.sass */
+.switcher .switch {
+  display: none;
+}
+/* line 76, ../sass-hidden/screen.sass */
+.switcher .switch.current {
+  display: block;
+}
+
+/* line 79, ../sass-hidden/screen.sass */
+#ticker {
+  font-size: 1.5em;
+  color: #fcfcfc;
+  font-weight: bold;
+}
+
+/* line 85, ../sass-hidden/screen.sass */
+#clock {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin: 20px auto 0 auto;
+  list-style: none;
+}
+/* line 94, ../sass-hidden/screen.sass */
+#clock #face {
+  width: 80%;
+  position: relative;
+  left: -1px;
+  top: -1px;
+}
+/* line 100, ../sass-hidden/screen.sass */
+#clock .hand {
+  position: absolute;
+  height: 100%;
+  top: 0px;
+  left: 49%;
+  width: 2%;
+}
+/* line 107, ../sass-hidden/screen.sass */
+#clock .hand .head {
+  background-color: white;
+  height: 50%;
+}
+/* line 111, ../sass-hidden/screen.sass */
+#clock .hand#seconds {
+  z-index: 3;
+  height: 88%;
+  top: 5%;
+}
+/* line 116, ../sass-hidden/screen.sass */
+#clock .hand#drinks {
+  z-index: 2;
+  height: 60%;
+  top: 20%;
+}
+
+/* line 122, ../sass-hidden/screen.sass */
+.shim {
+  z-index: 10;
+  background-color: black;
+  opacity: 0.8;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+/* line 133, ../sass-hidden/screen.sass */
+.shim .dialog {
+  width: 50%;
+  margin: auto;
+  position: fixed;
+  top: 40%;
+  left: 25%;
+  color: white;
+}
+/* line 141, ../sass-hidden/screen.sass */
+.shim .dialog h1 {
+  text-align: center;
+  font-size: 4em;
+}

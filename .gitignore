@@ -1,0 +1,33 @@
+# use glob syntax.
+syntax: glob
+*.ser
+*.class
+*~
+*.bak
+*.off
+*.old
+.DS_Store
+*.swo
+*.swp
+*.swn
+
+# eclipse conf file
+.settings
+.classpath
+.project
+.manager
+
+# sass
+.sass-cache
+
+# other scm
+.svn
+.CVS
+.hg*
+
+# IntelliJ
+*.iml
+*.ipr
+*.iws
+.idea
+

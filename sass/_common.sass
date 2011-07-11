@@ -1,0 +1,31 @@
+@import compass/utilities/text
+@import compass/utilities/general
+
+$blueprint_grid_columns: 12
+$blueprint_grid_width: 70px
+$blueprint_grid_margin: 10px
+$blueprint_grid_outer_width: 80px
+$blueprint_container_size: 960px
+
+$error_color: #FF0000
+
+$link_color: #00B1F2
+$hover_link_color: #00B1F2
+
+= link-style
+  text-decoration: none
+
+  &:link, &:active, &:visited
+    color: $link_color
+
+  &:hover
+    color: $hover_link_color
+    text-decoration: underline
+
+= standard-font
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif
+
+= box-shadow($color, $horizontal_offset, $vertical_offset, $blur_radius)
+  -webkit-box-shadow: $color $horizontal_offset $vertical_offset $blur_radius
+  -moz-box-shadow: $color $horizontal_offset $vertical_offset $blur_radius
+  box-shadow: $color $horizontal_offset $vertical_offset $blur_radius

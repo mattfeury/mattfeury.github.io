@@ -1,0 +1,68 @@
+/* 
+	Master Styles for the UTC Studio page.
+
+	This was done in haste with little foresight and lots of wine.
+ */
+
+/* base */
+body
+{
+	font-family: Helvetica, Arial, sans-serif;	
+	background: #dfdfdf;
+}
+
+h1 { font-size: 4em; }
+h2 { font-size: 3em; }
+h3 { font-size: 2em; }
+h4 { font-size: 1em; }
+h1,h2,h3,h4 { letter-spacing: -0.1em; }
+
+*
+{ 
+	padding: 0; 
+	margin: 0;
+}
+
+#container
+{
+	max-width: 900px;
+	margin: auto;
+	margin-top: 13px;
+}
+
+.clear { clear: both; }
+
+/* header */
+
+header
+{
+	text-align: center;	
+}
+
+header * { display: inline-block; }
+header h2 { margin-left: 13px; font-weight: normal; }
+
+/* content */
+
+section.pane
+{
+	float: left;
+	width: 281px;
+	min-height: 420px;
+	margin: 8px;
+	border: 1px solid #ccc;
+}
+
+section.pane h2
+{
+	font-weight: normal;	
+}
+
+/* footer */
+footer
+{
+	margin: 8px 0px;
+	clear: both;
+	text-align: center;
+}
+footer * { display: inline-block; }

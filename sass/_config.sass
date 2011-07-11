@@ -1,0 +1,484 @@
+@import compass/utilities
+@import susy/utils
+
+// CONTENT INFO
+$content_cols: 11.5
+$sidebar_cols: 4
+
+//** 
+  GRID
+  un-comment and override these values as needed for your grid layout 
+  (defaults are shown)
+// $grid_unit : "em"
+$total_cols : 16.0
+$col_width :  2.5
+$gutter_width : 1.25
+// $side_gutter_width : $gutter_width
+
+
+//** 
+  OMEGA_FLOAT
+  By default, +omega elements are floated right.
+  You can override that globally here:
+// $omega_float : "right"
+
+
+//**
+  HACKS
+  Are you using hacks or conditional comments? Susy makes both possible.
+  Leave this as 'true' to use hacks, set it as false for conditional comments.
+  Conditional comments will require overrides for +omega, +inline-block and
+  several other mixins.
+$hacks : false
+
+//** 
+  FONT-SIZE
+  un-comment and override these values as needed (defaults are shown)
+  - you set the font and line heights in pixels.
+  - Susy will do the math and give you $base_font_size and $base_line_height 
+    variables, set flexibly against the common browser default of 16px
+// $base_font_size_px : 16
+// $base_line_height_px : 24
+// SUSY
+//  (don't move this @import above the GRID and FONT-SIZE overrides)
+@import susy/susy
+
+//------------------------------
+// COLORS
+//------------------------------
+$light-background-blue: #E2F4FF
+$light-border-blue: #C9EEFF
+$medium-background-blue: #B7E8FF
+$sidebar-background-color: $light-background-blue
+
+$dark-red: #FF0016
+$dark-gray: #373737
+$field-border-gray: #B3B3B3
+$light-gray: #848484
+$lightest-gray: #A4A4A4
+$follow-description-color: #BCBCBC
+$link-color: #00B1F2
+$link-hover-color: #007EBF
+
+$outer-border-blue: #CBE2FF
+$inner-border-blue: #E4F6FF
+
+$avatar-border-color: #D7D7D7
+
+$orange: #FEBF46
+$token-orange: #F7BA43
+$text-orange: #EFB137
+
+$token-background-color: #DDF4FF
+$token-border-color: #AEE2FE
+$token-text-color: $link-color
+
+$checkbox-label-background-color: #72D0FF
+$checkbox-label-hover-background-color: $light-background-blue
+$checkbox-label-border-color: #52C5FF
+
+=hidden-checkbox-label
+  +border-radius(5px)
+
+  cursor: pointer
+
+  .checkmark
+    display: none
+
+  &, img
+    border: 1px solid white
+
+  img
+    background-color: white
+
+  &:hover
+    background-color: $checkbox-label-hover-background-color
+    border-color: $medium-background-blue
+
+=hidden-checkbox-label-hover
+  background-color: $checkbox-label-background-color
+  border-color: $checkbox-label-border-color
+
+  color: white
+
+  position: relative
+
+  img
+    border-color: $checkbox-label-border-color
+
+  .checkmark
+    display: block
+
+    border: 1px $checkbox-label-border-color
+    border-style: solid solid none none
+
+    width: 13px
+    height: 11px
+
+    padding: 1px
+
+    background: #72D0FF url('/images/signup-checkmark.png') no-repeat bottom left
+
+    position: absolute
+    bottom: 6px
+    left: 6px
+
+=feed-item-participate-button
+  border: none
+
+  cursor: pointer
+  color: white
+  width: 81px
+  height: 23px
+  line-height: 23px
+
+  background: transparent url('/images/feed-item-participate.png') no-repeat left top
+
+  &:hover
+    text-decoration: none
+    background-position: left -23px
+  &:active
+    background-position: left -46px
+
+  &.disabled
+    background-position: left -69px
+    color: $light-gray
+
+=sprite($file, $button-location, $button-vertical-offset, $button-height, $button-width, $text-replace, $forced-vertical)
+  $vertical-position: 0
+  @if $forced-vertical != false
+    $vertical-position: $forced-vertical
+
+  @if $text-replace == true
+    +replace-text($file)
+
+    background-position: (-$button-location) (-$button-vertical-offset + $vertical-position)
+
+  @if $text-replace == false
+    background: transparent url($file) no-repeat (-$button-location) (-$button-vertical-offset + $vertical-position)
+
+  height: $button-height
+  width: $button-width
+
+  @if $forced-vertical == false
+    &:hover
+      background-position: -$button-location (-$button-vertical-offset - $button-height)
+    &:active
+      background-position: -$button-location (-$button-vertical-offset - 2 * $button-height)
+
+    &[disabled], &.disabled
+      color: #B1B1B1
+
+      background-position: -$button-location (-$button-vertical-offset - 3 * $button-height)
+
+=common-sprite($button, $forced-vertical: false)
+  $button-location: 0
+  $button-vertical-offset: 0
+  $button-height: 0
+  $button-width: 0
+  $text-replace: false
+
+  @if $button == "privacy-icon"
+    $button-width: 10px
+    $button-height: 13px
+  @else if $button == "thumbs-up"
+    $button-vertical-offset: 18px
+    $button-width: 12px
+    $button-height: 13px
+
+  +sprite('/images/common-sprite.png', $button-location, $button-vertical-offset, $button-height, $button-width, $text-replace, $forced-vertical)
+
+=feed-sprite($button, $forced-vertical: false)
+  $button-location: 0
+  $button-vertical-offset: 0
+  $button-height: 0
+  $button-width: 0
+  $text-replace: false
+
+  @if $button == "ask-question"
+    $button-location: 0
+    $button-height: 87px
+    $button-width: 360px
+    $text-replace: true
+  @else if $button == "ask-question-small"
+    $button-location: 0
+    $button-vertical-offset: 261px
+    $button-width: 360px
+    $button-height: 63px
+  @else if $button == "create-studypad"
+    $button-location: 360px
+    $button-height: 87px
+    $button-width: 281px
+    $text-replace: true
+  @else if $button == "create-studypad-small"
+    $button-location: 360px
+    $button-vertical-offset: 261px
+    $button-width: 281px
+    $button-height: 63px
+  @else if $button == "ask-now"
+    $button-location: 1158px
+    $button-vertical-offset: 99px
+    $button-height: 33px
+    $button-width: 110px
+  @else if $button == "study-groups-add"
+    $button-location: 740px
+    $button-height: 23px
+    $button-width: 65px
+  @else if $button == "add-topics"
+    $button-location: 805px
+    $button-height: 24px
+    $button-width: 38px
+  @else if $button == "invite-friends"
+    $button-location: 843px
+    $button-height: 47px
+    $button-width: 178px
+    $text-replace: true
+  @else if $button == "reach-out"
+    $button-location: 1021px
+    $button-height: 33px
+    $button-width: 119px
+  @else if $button == "dialog-close"
+    $button-location: 1140px
+    $button-height: 13px
+    $button-width: 13px
+    $text-replace: true
+  @else if $button == "token-delete"
+    $button-location: 1153px
+    $button-height: 13px
+    $button-width: 13px
+    $text-replace: true
+  @else if $button == "thumbs-up"
+    $button-location: 1166px
+    $button-height: 15px
+    $button-width: 14px
+  @else if $button == "large-thumbs-up"
+    $button-location: 641px
+    $button-vertical-offset: 99px
+    $button-height: 17px
+    $button-width: 15px
+  @else if $button == "join-studygroup"
+    $button-location: 641px
+    $button-vertical-offset: 261px
+    $button-height: 47px
+    $button-width: 229px
+    $text-replace: true
+  @else if $button == "follow-person"
+    $button-location: 870px
+    $button-vertical-offset: 261px
+    $button-height: 47px
+    $button-width: 229px
+    $text-replace: true
+  @else if $button == "follow-topic"
+    $button-location: 1099px
+    $button-vertical-offset: 261px
+    $button-height: 47px
+    $button-width: 225px
+    $text-replace: true
+  @else if $button == "dialog-ask-question"
+    $button-location: 641px
+    $button-vertical-offset: 129px
+    $button-height: 33px
+    $button-width: 125px
+  @else if $button == "create-now"
+    $button-location: 1405px
+    $button-vertical-offset: 99px
+    $button-height: 33px
+    $button-width: 99px
+  @else if $button == "invite-people"
+    $button-location: 1268px
+    $button-vertical-offset: 99px
+    $button-height: 33px
+    $button-width: 137px
+  @else if $button == "dialog-create-studypad"
+    $button-location: 1325px
+    $button-vertical-offset: 263px
+    $button-height: 33px
+    $button-width: 151px
+  @else if $button == "invite-to-study-group"
+    $button-location: 766px
+    $button-vertical-offset: 140px
+    $button-height: 36px
+    $button-width: 223px
+    $text-replace: true
+  @else if $button == "question-small-icon"
+    $button-location: 1477px
+    $forced-vertical: -263px
+    $button-height: auto
+    $button-width: auto
+  @else if $button == "studypad-small-icon"
+    $button-location: 1477px
+    $forced-vertical: -296px
+    $button-height: auto
+    $button-width: auto
+  @else if $button == "create-study-group"
+    $button-location: 1325px
+    $button-vertical-offset: 395px
+    $button-height: 47px
+    $button-width: 192px
+    $text-replace: true
+
+  +sprite('/images/feed-sprite.png', $button-location, $button-vertical-offset, $button-height, $button-width, $text-replace, $forced-vertical)
+
+=pad-sprite($button, $forced-vertical: false)
+  $button-location: 0
+  $button-vertical-offset: 0
+  $button-height: 0
+  $button-width: 0
+  $text-replace: false
+
+  @if $button == "save-changes"
+    $button-location: 0
+    $button-height: 23px
+    $button-width: 105px
+    $text-replace: true
+  @else if $button == "invite-people"
+    $button-location: 105px
+    $button-height: 26px
+    $button-width: 99px
+    $text-replace: true
+  @else if $button == "add-study-groups"
+    $button-location: 204px
+    $button-height: 23px
+    $button-width: 65px
+    $text-replace: true
+  @else if $button == "download"
+    $button-location: 268px
+    $button-height: 30px
+    $button-width: 116px
+    $text-replace: true
+  @else if $button == "view-snapshots"
+    $button-location: 384px
+    $button-height: 30px
+    $button-width: 133px
+    $text-replace: true
+  @else if $button == "replay"
+    $button-location: 517px
+    $button-height: 30px
+    $button-width: 102px
+    $text-replace: true
+  @else if $button == "save-snapshot"
+    $button-location: 619px
+    $button-height: 25px
+    $button-width: 121px
+    $text-replace: true
+  @else if $button == "follow-question"
+    $button-location: 741px
+    $button-height: 47px
+    $button-width: 225px
+    $text-replace: true
+  @else if $button == "follow-studypad"
+    $button-location: 966px
+    $button-height: 47px
+    $button-width: 225px
+    $text-replace: true
+  @else if $button == "close"
+    $button-location: 204px
+    $button-vertical-offset: 92px
+    $button-height: 23px
+    $button-width: 65px
+    $text-replace: true
+
+  +sprite('/images/pad-sprite.png', $button-location, $button-vertical-offset, $button-height, $button-width, $text-replace, $forced-vertical)
+
+=public-access-sprite($button, $forced-horizontal: 0, $forced-vertical: false)
+  $button-location: 0
+  $button-vertical-offset: 0
+  $button-height: 0
+  $button-width: 0
+  $text-replace: true
+
+  @if $button == "sign-up"
+    $forced-vertical: 0
+    $button-location: 0
+    $button-height: 156px
+    $button-width: 326px
+  @else if $button == "sign-up-button"
+    $button-location: 53px
+    $button-vertical-offset: 54px
+    $button-height: 156px
+    $button-width: 326px
+  @else if $button == "connect-with-facebook"
+    $forced-vertical: 0
+    $button-location: 326px
+    $button-height: 146px
+    $button-width: 323px
+  @else if $button == "connect-with-facebook-button"
+    $button-location: 379px
+    $button-vertical-offset: 53px
+    $button-height: 146px
+    $button-width: 323px
+  @else if $button == "sign-up-small"
+    $forced-vertical: 0
+    $button-location: 649px
+    $button-height: 146px
+    $button-width: 254px
+  @else if $button == "sign-up-small-button"
+    $button-location: 702px
+    $button-vertical-offset: 54px
+    $button-height: 146px
+    $button-width: 254px
+  @else if $button == "sign-in"
+    $button-location: 903px
+    $button-height: 42px
+    $button-width: 80px
+  @else if $button == "background"
+    $forced-vertical: -468px
+    $button-height: 114px
+    $button-width: 946px
+    $text-replace: false
+  @else if $button == "users-text"
+    $forced-vertical: -582px
+    $button-height: 30px
+    $button-width: 366px
+  @else if $button == "topics-text"
+    $button-location: 366px
+    $forced-vertical: -582px
+    $button-height: 26px
+    $button-width: 446px
+  @else if $button == "search-text"
+    $forced-vertical: -612px
+    $button-height: 30px
+    $button-width: 389px
+  @else if $button == "study-groups-text"
+    $button-location: 389px
+    $forced-vertical: -612px
+    $button-height: 28px
+    $button-width: 460px
+  @else if $button == "studypads-text"
+    $forced-vertical: -642px
+    $button-height: 31px
+    $button-width: 433px
+  @else if $button == "dialog-background"
+    $forced-vertical: -673px
+    $button-height: 346px
+    $button-width: 646px
+  @else if $button == "close-button"
+    $forced-vertical: -673px
+    $button-location: 646px
+    $button-height: 13px
+    $button-width: 13px
+
+  $button-location: $button-location - $forced-horizontal
+
+  +sprite('/images/public-access-sprite.png', $button-location, $button-vertical-offset, $button-height, $button-width, $text-replace, $forced-vertical)
+
+@font-face
+  font-family: "Union"
+  src: url(/fonts/union.eot)
+  font-weight: normal
+
+@font-face
+  font-family: "Union"
+  src: url(/fonts/unionbold.eot)
+  font-weight: bold
+
+@font-face
+  font-family: "Union"
+  src: url(/fonts/union.ttf) format("truetype")
+  font-weight: normal
+
+@font-face
+  font-family: "Union"
+  src: url(/fonts/unionbold.ttf) format("truetype")
+  font-weight: bold
+

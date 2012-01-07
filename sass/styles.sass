@@ -1,13 +1,23 @@
 @import "compass/css3"
 @import "compass/utilities/general/clearfix"
+@import "compass/typography/vertical_rhythm"
+@import "compass/css3/box-sizing"
 
+$highlightColor: #25593B
 /* reset. */
+html, body
+  min-height: 100%
 body
   font-family: Arial, sans-serif
-  background: #e5e5e5
+  background-color: #e5e5e5
+  background-image: url('../images/gramophone-transparent.png')
+  background-repeat: no-repeat
+  background-position: bottom left
+  background-size: 380px 394px
 
 h1
   font-size: 4em
+  letter-spacing: -0.1em
 h2
   font-size: 3em
 h3
@@ -17,7 +27,6 @@ h4
 	
 h1,h2,h3
   font-family: 'Josefin Sans', Arial, sans-serif
-  letter-spacing: -0.1em
 
   &, h4, h5, h6
     a
@@ -28,115 +37,93 @@ h1,h2,h3
   margin: 0
 
 ul
-  list-style-type: disc
-  
-  li
-    margin-left: 17px
-    padding-top: 8px
+  list-style-type: none
 
-p, div, span, ul
-  font-size: 12px
-
-p
-  margin: 15px 0px
+//p, div, span, ul
+  +adjust-font-size-to(12px)  
 
 //the good stuff
 #container
-  max-width: 900px
-  margin: auto
+  //width: 40%
   margin-top: 13px
+  margin-left: 500px
+  margin-right: 5%
+  text-align: left
+
+  width: 350px
+  //display: table
 
 a
   text-decoration: none
-  color: #25593B
+  color: $highlightColor
   font-weight: bold
 
   &:hover
     text-decoration: underline
   &:visited
-    color: #25593B
+    color: $highlightColor
 
 .clear
   clear: both
 
-/* header */
 header
-  text-align: center
   display: block
 
-header
-  *
-    display: inline-block
-  h2
-    margin-left: 13px
+  h1
+    display: block
+    +adjust-font-size-to(72px)
+  .title
+    display: block
+    font-weight: 900
+
+    +adjust-font-size-to(28px)
+
+  .credentials
+    display: block
     font-weight: 300
 
-/* content */
-#gramophone
-  position: fixed
-  z-index: -1
-  bottom: 0px
-  left: 0px
-  +opacity(.5)
+    +adjust-font-size-to(18px)
 
-nav
-  position: fixed
-  top: 0px
-  left: 0px
-  padding: 21px
-  width: 400px
 
-.break
-  margin: 13px 0px
+h6
+  font-weight: bold
+  color: $highlightColor
 
-.third
-  float: left
-  width: 281px
-  min-height: 480px
+  margin: 15px 0 15px
 
-section#meat
+  +adjust-font-size-to(12px)
+
+ul
+  padding-bottom: 5px
   +clearfix
 
-  section.pane
-    margin: 8px
-    border: 1px solid #ccc
-    background-color: #efefef
+  li
+    width: 50%
+    height: 80px
+    float: left
 
-    h1, h2, h3, h4, h5, h6
-      font-weight: normal
+    &:nth-child(even)
+      text-align: right
+      border-left: 1px solid $highlightColor
+      +box-sizing("border-box")
+    a
+      +adjust-font-size-to(24px)
 
+    .details
+      color: #444
+      +adjust-font-size-to(14px)
 
-    &:first-child
-      +border-top-left-radius(21px)
-    &:last-child
-      +border-bottom-right-radius(21px)
-      clear: right
+  &#past-projects
+    li a
+      +adjust-font-size-to(16px)
 
-    h2
-      font-weight: 100 
-      +opacity(.9)
-      +text-shadow
-      
-    > *
-      padding: 10px
-
-  #ozmo
-    display: block
-    margin: auto
-
-
-/* footer */
-footer
-  margin: 8px 0px
-  clear: both
-  text-align: center
-  display: block
-
-  *
-    display: inline-block
+.contact
+  margin-top: 1em
+  color: #444
+  +adjust-font-size-to(18px)
 
 // LASTFM STYLING
-ul#albums
+//ul#albums
   list-style: none
   display: block
   padding: 0px
@@ -153,7 +140,7 @@ ul#albums
       border: 0px
 
 //TWEETBOX
-ul#tweets
+//ul#tweets
   li
     .date
       display: block

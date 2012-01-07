@@ -1,9 +1,3 @@
-  </section>
-	<footer>
-	<h4>see ya</h4>
-	</footer>
-
-	
 </div>
 <script type="text/javascript">
 var clicky = { log: function(){ return; }, goal: function(){ return; }};

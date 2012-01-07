@@ -27,9 +27,3 @@ $("a[rel*='external']").click(function(){
 </head>
 <body>
 <div id="container">
-<!--	<header>
-		<h1>matt feury.com</h1>
-		<h2>ya like dags?</h2>
-	</header>-->
-
-	<section id="meat">

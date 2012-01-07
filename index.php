@@ -1,6 +1,6 @@
 <? include "templates/head.php" ?>
 <script type="text/javascript" src="javascripts/sunburst.js"></script>
-<script type="text/javascript" src="javascripts/mattfeury.js"></script> 
+<!--<script type="text/javascript" src="javascripts/mattfeury.js"></script>-->
 <? include "templates/header.php" ?>
   <canvas id="binary" width="500" height="500"></canvas>  
   <canvas id="beams" width="500" height="500"></canvas>  

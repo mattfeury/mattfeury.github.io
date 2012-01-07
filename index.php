@@ -43,7 +43,7 @@
     Find me on 
     <a href="http://www.github.com/mattfeury" target="_blank">Github</a>,
     <a href="http://www.twitter.com/soundandfeury" target="_blank">Twitter</a>,
-    or <a href="http://www.last.fm/user/mattfeury" target="_blank">last.fm</a>.
+    or <a href="http://www.last.fm/user/mattfeury" target="_blank">Last.fm</a>.
   </p>
 
     <!--<h3>Dancing Ghost:</h3>

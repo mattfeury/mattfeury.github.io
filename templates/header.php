@@ -1,6 +1,6 @@
 <script type="text/javascript">
 $(function() {
-  $("a[rel*='external']").click(function(){
+  $('a').click(function(){
     try {
       var myTracker=_gat._getTrackerByName();
       _gaq.push(['myTracker._trackPageview','/outgoing/'+ $(this).attr('href')]);

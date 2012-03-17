@@ -23,11 +23,11 @@
   <h6>Past Projects</h6>
   <ul id="past-projects">
     <li>
-      <a href="/word" rel="external">Word, Dog</a>
+      <a target="_blank" href="/word" rel="external">Word, Dog</a>
       <div class="details">Developer</div>
     </li>
     <li>
-      <a href="/audiolizer/index.php" rel="external">Audiolizer</a>
+      <a target="_blank" href="/audiolizer/index.php" rel="external">Audiolizer</a>
       <div class="details">Co-creator</div>
     </li>
     <li>

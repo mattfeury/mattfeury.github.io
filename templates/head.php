@@ -1,4 +1,3 @@
-<? session_start(); // start up the sesh ?>
 <!DOCTYPE HTML>
 <html>
 <head>

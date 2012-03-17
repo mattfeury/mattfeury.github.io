@@ -1,15 +1,12 @@
 <script type="text/javascript">
-$("a[rel*='external']").click(function(){
-  try {
-    var myTracker=_gat._getTrackerByName();
-    _gaq.push(['myTracker._trackPageview','/outgoing/'+ $(this).attr('href')]);
-    setTimeout('document.location = "' + $(this).attr('href') + '"', 100)
-  }catch(err){}
-
-  return false;
-
-});
-
+$(function() {
+  $("a[rel*='external']").click(function(){
+    try {
+      var myTracker=_gat._getTrackerByName();
+      _gaq.push(['myTracker._trackPageview','/outgoing/'+ $(this).attr('href')]);
+    }catch(err){}
+  });
+})
 </script>
 <script type="text/javascript">
 

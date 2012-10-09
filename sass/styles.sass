@@ -10,10 +10,16 @@ html, body
 body
   font-family: Arial, sans-serif
   background-color: #e5e5e5
-  background-image: url('../images/gramophone-transparent.png')
-  background-repeat: no-repeat
-  background-position: bottom left
-  background-size: 380px 394px
+  
+  // Webkit chokes and doesn't always display the image if it's a background image, so we use a pseudo element trickery.
+  &:after 
+    content: url("../images/gramophone-transparent.png")
+    display: block
+    position: fixed
+    width: 380px
+    height: 394px
+    left: 0
+    bottom: 0
 
 h1
   font-size: 4em

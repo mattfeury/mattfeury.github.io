@@ -12,7 +12,7 @@
   <h6>Current Projects</h6>
   <ul id="current-projects">
     <li>
-      <a target="_blank" href="http://openstudy.com/" rel="external">OpenStudy</a>
+      <a target="_blank" href="http://www.findexp.com/" rel="external">Experience</a>
       <div class="details">Software Engineer</div>
     </li>
     <li>
@@ -23,16 +23,16 @@
   <h6>Past Projects</h6>
   <ul id="past-projects">
     <li>
+      <a target="_blank" href="http://openstudy.com/" rel="external">OpenStudy</a>
+      <div class="details">Software Engineer</div>
+    </li>
+    <li>
       <a target="_blank" href="/word" rel="external">Word, Dog</a>
       <div class="details">Developer</div>
     </li>
     <li>
       <a target="_blank" href="/audiolizer/index.php" rel="external">Audiolizer</a>
       <div class="details">Co-creator</div>
-    </li>
-    <li>
-      <a target="_blank" href="http://www.music.gatech.edu/" rel="external">Georgia Tech School of Music</a>
-      <div class="details">Developer, Designer</div>
     </li>
     <li>
       <a target="_blank" href="http://www.meedeor.com/" rel="external">MEEDEOR</a>

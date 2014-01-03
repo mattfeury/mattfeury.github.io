@@ -2,8 +2,7 @@
 $(function() {
   $('a').click(function(){
     try {
-      var myTracker=_gat._getTrackerByName();
-      _gaq.push(['myTracker._trackPageview','/outgoing/'+ $(this).attr('href')]);
+      _gaq.push(['_trackPageview','/outgoing/'+ $(this).attr('href')]);
     }catch(err){}
   });
 })

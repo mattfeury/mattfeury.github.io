@@ -31,7 +31,7 @@
       <div class="details">Developer</div>
     </li>
     <li>
-      <a target="_blank" href="/audiolizer/index.php" rel="external">Audiolizer</a>
+      <a target="_blank" href="https://github.com/mattfeury/Audiolizer" rel="external">Audiolizer</a>
       <div class="details">Co-creator</div>
     </li>
     <li>

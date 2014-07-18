@@ -12,7 +12,7 @@
   <h6>Current Projects</h6>
   <ul id="current-projects">
     <li>
-      <a target="_blank" href="http://www.findexp.com/" rel="external">Experience</a>
+      <a target="_blank" href="http://www.expapp.com/" rel="external">Experience</a>
       <div class="details">Software Engineer</div>
     </li>
     <li>

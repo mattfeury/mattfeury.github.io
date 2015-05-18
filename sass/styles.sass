@@ -76,11 +76,6 @@ header
   h1
     display: block
     +adjust-font-size-to(72px)
-  .title
-    display: block
-    font-weight: 900
-
-    +adjust-font-size-to(28px)
 
   .credentials
     display: block
@@ -102,19 +97,14 @@ ul
   +clearfix
 
   li
-    width: 50%
-    height: 80px
-    float: left
+    margin-bottom: 0.75em
 
-    &:nth-child(even)
-      text-align: right
-      border-left: 1px solid $highlightColor
-      +box-sizing("border-box")
     a
-      +adjust-font-size-to(24px)
+      font-size: 1.5em
 
     .details
-      color: #444
+      color: #999
+      display: inline-block
       +adjust-font-size-to(14px)
 
   &#past-projects

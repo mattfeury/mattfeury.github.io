@@ -6,37 +6,36 @@
   <canvas id="beams" width="500" height="500"></canvas>  
   <header>
     <h1>mattfeury.com</h1>
-    <h3 class="title">Software Engineer</h3>
     <h3 class="credentials">B.S. Computer Science, Georgia Tech 2011</h3>
   </header>
   <h6>Current Projects</h6>
   <ul id="current-projects">
     <li>
       <a target="_blank" href="http://www.expapp.com/" rel="external">Experience</a>
-      <div class="details">Software Engineer</div>
+      <div class="details">make memories</div>
     </li>
     <li>
       <a target="_blank" href="http://market.android.com/details?id=com.mattfeury.saucillator.android" rel="external">Saucillator</a>
-      <div class="details">Creator</div>
+      <div class="details">make instruments</div>
+    </li>
+    <li>
+      <a target="_blank" href="https://play.google.com/store/apps/details?id=com.mattfeury.cusack" rel="external">Cusack</a>
+      <div class="details">know music</div>
     </li>
   </ul>
   <h6>Past Projects</h6>
   <ul id="past-projects">
     <li>
       <a target="_blank" href="http://openstudy.com/" rel="external">OpenStudy</a>
-      <div class="details">Software Engineer</div>
+      <div class="details">learn things</div>
     </li>
     <li>
-      <a target="_blank" href="/word" rel="external">Word, Dog</a>
-      <div class="details">Developer</div>
+      <a target="_blank" href="http://madrigal-fm.herokuapp.com/" rel="external">Madrigal</a>
+      <div class="details">choose music</div>
     </li>
     <li>
       <a target="_blank" href="https://github.com/mattfeury/Audiolizer" rel="external">Audiolizer</a>
-      <div class="details">Co-creator</div>
-    </li>
-    <li>
-      <a target="_blank" href="http://www.meedeor.com/" rel="external">MEEDEOR</a>
-      <div class="details">Former developer, Helvetica advocate</div>
+      <div class="details">create music</div>
     </li>
   </ul>
   <p class="contact">

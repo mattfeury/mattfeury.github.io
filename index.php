@@ -27,7 +27,7 @@
   <ul id="past-projects">
     <li>
       <a target="_blank" href="http://openstudy.com/" rel="external">OpenStudy</a>
-      <div class="details">learn things</div>
+      <div class="details">educate yrself</div>
     </li>
     <li>
       <a target="_blank" href="http://madrigal-fm.herokuapp.com/" rel="external">Madrigal</a>

@@ -31,7 +31,7 @@
     </li>
     <li>
       <a target="_blank" href="http://madrigal-fm.herokuapp.com/" rel="external">Madrigal</a>
-      <div class="details">choose music</div>
+      <div class="details">find music</div>
     </li>
     <li>
       <a target="_blank" href="https://github.com/mattfeury/Audiolizer" rel="external">Audiolizer</a>

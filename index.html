@@ -1,9 +1,48 @@
-<? include "templates/head.php" ?>
+<!DOCTYPE HTML>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>mattfeury.com</title>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+
+<!--[if IE]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <script type="text/javascript" src="javascripts/excanvas.js"></script>
+<![endif]-->
+
+<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:100,light,regular&amp;subset=latin' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="stylesheets/styles.css" />
 <script type="text/javascript" src="javascripts/sunburst.js"></script>
 <!--<script type="text/javascript" src="javascripts/mattfeury.js"></script>-->
-<? include "templates/header.php" ?>
-  <canvas id="binary" width="500" height="500"></canvas>  
-  <canvas id="beams" width="500" height="500"></canvas>  
+<script type="text/javascript">
+$(function() {
+  $('a').click(function(){
+    try {
+      _gaq.push(['_trackPageview','/outgoing/'+ $(this).attr('href')]);
+    }catch(err){}
+  });
+})
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20461357-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body>
+<div id="container">
+  <canvas id="binary" width="500" height="500"></canvas>
+  <canvas id="beams" width="500" height="500"></canvas>
   <header>
     <h1>mattfeury.com</h1>
     <h3 class="credentials">B.S. Computer Science, Georgia Tech 2011</h3>
@@ -39,7 +78,7 @@
     </li>
   </ul>
   <p class="contact">
-    Find me on 
+    Find me on
     <a href="http://www.github.com/mattfeury" target="_blank">Github</a>,
     <a href="http://www.twitter.com/soundandfeury" target="_blank">Twitter</a>,
     or <a href="http://www.last.fm/user/mattfeury" target="_blank">Last.fm</a>.
@@ -47,5 +86,19 @@
 
     <!--<h3>Dancing Ghost:</h3>
     <img id="ozmo" src="12-oz.gif" />-->
-  
-<? include "templates/footer.php" ?>
+
+</div>
+<script type="text/javascript">
+var clicky = { log: function(){ return; }, goal: function(){ return; }};
+var clicky_site_id = 66387991;
+(function() {
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = ( document.location.protocol == 'https:' ? 'https://static.getclicky.com/js' : 'http://static.getclicky.com/js' );
+  ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+})();
+</script>
+</body>
+
+</html>
